@@ -1,6 +1,6 @@
 namespace MovieRatingAppBackend.Domain.Entities;
 
-public sealed class Crew
+public class CastType
 {
     
 }

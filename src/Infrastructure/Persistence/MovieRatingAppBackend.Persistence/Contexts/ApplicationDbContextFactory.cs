@@ -15,10 +15,10 @@ public class ApplicationDesignTimeDbContextFactory : IDesignTimeDbContextFactory
 
     public ApplicationDbContext CreateDbContext(string[] args)
     {
-        var connectionString = _configuration.GetConnectionString("PostgreSql");
+        var connectionString = _configuration.GetConnectionString("SqlServer");
 
         DbContextOptionsBuilder<ApplicationDbContext> builder = new();
-        builder.UseNpgsql(connectionString);
+        builder.UseSqlServer(connectionString);
 
         return new ApplicationDbContext(builder.Options);
     }

@@ -12,8 +12,16 @@ public static class ServiceRegistration
     {
         services.AddDbContext<ApplicationDbContext>(opt =>
         {
-            opt.UseNpgsql(configuration.GetConnectionString("PostgreSql"));
+            opt.UseSqlServer(configuration.GetConnectionString("SqlServer"), builder =>
+            {
+                builder.EnableRetryOnFailure();
+                builder.CommandTimeout(30);
+            } );
+            opt.EnableDetailedErrors();
+            opt.EnableSensitiveDataLogging();
         });
+        
+        
         
         return services;
     }
