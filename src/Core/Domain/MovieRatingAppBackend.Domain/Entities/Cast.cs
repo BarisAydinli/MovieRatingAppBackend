@@ -1,6 +1,9 @@
+using MovieRatingAppBackend.Domain.Common;
+using MovieRatingAppBackend.Domain.Enums;
+
 namespace MovieRatingAppBackend.Domain.Entities;
 
-public sealed class Cast
+public sealed class Cast : Entity
 {
     public ICollection<Film> Films { get; set; }
     
@@ -8,5 +11,5 @@ public sealed class Cast
     public string LastName { get; set; }
     public string Description { get; set; }
 
-    public int CastType { get; set; }
+    public CastType CastType { get; set; }
 }

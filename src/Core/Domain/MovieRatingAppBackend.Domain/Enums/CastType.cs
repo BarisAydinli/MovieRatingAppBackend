@@ -2,6 +2,7 @@ namespace MovieRatingAppBackend.Domain.Enums;
 
 public enum CastType
 {
-    Actress = 1,
-    Actor = 2
+    Director = 1,
+    Actress = 2,
+    Actor = 3
 }

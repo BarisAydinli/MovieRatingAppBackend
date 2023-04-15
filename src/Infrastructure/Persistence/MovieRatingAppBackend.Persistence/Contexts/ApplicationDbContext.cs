@@ -1,9 +1,10 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MovieRatingAppBackend.Domain.Entities;
 
 namespace MovieRatingAppBackend.Persistence.Contexts;
 
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext : IdentityDbContext
 {
     public DbSet<AlternativeTitle> AlternativeTitles { get; set; }
     public DbSet<Cast> Casts { get; set; }

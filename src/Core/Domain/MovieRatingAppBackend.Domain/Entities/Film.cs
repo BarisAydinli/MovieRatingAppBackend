@@ -28,3 +28,4 @@ public sealed class Film : Entity
     public string PosterPath { get; set; }
     public string BackgroundImagePath { get; set; }
 }
+
