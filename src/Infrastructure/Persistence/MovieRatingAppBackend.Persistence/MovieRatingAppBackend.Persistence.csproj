@@ -16,6 +16,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\Core\Domain\MovieRatingAppBackend.Domain\MovieRatingAppBackend.Domain.csproj" />
+      <ProjectReference Include="..\..\MovieRatingAppBackend.Infrastructure\MovieRatingAppBackend.Infrastructure.csproj" />
     </ItemGroup>
 
     <ItemGroup>
